@@ -1,0 +1,59 @@
+@import 'styles/colors';
+
+.header {
+  color: white;
+  background: $dark;
+}
+
+.header-container {
+  max-width: 1160px;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header-brand {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.header-description {
+  color: transparentize(white, 0.2);
+  margin-left: 1rem;
+}
+
+.search {
+  margin-left: 2rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid transparentize(white, 0.65);
+  background: transparent;
+  border-radius: 0.25rem;
+  outline: 0;
+  transition: 0.2s ease-in-out;
+  width: 240px;
+  color: white;
+  box-shadow: 0 0 2rem 0 transparentize(black, 0.95);
+  font-size: 14px;
+
+  &:focus {
+    border: 1px solid transparentize(white, 0.45);
+  }
+
+  &::-webkit-input-placeholder {
+    color: transparentize(white, 0.3);
+  }
+
+  &:-moz-placeholder {
+    color: transparentize(white, 0.3);
+  }
+
+  &::-moz-placeholder {
+    color: transparentize(white, 0.3);
+  }
+
+  &:-ms-input-placeholder {
+    color: transparentize(white, 0.3);
+  }
+}
