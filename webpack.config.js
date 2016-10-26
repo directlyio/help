@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 const path = require('path');
 
@@ -21,9 +20,6 @@ module.exports = [
       __dirname: false,
     },
     externals: nodeExternals(),
-    plugins: [
-      new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify('development') } }),
-    ],
     module: {
       loaders: [
         {
@@ -52,9 +48,6 @@ module.exports = [
       publicPath: '/',
       filename: 'bundle.js',
     },
-    plugins: [
-      new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify('development') } }),
-    ],
     module: {
       loaders: [
         {

@@ -5,15 +5,11 @@ import { App, Layout } from './components';
 
 const app = express();
 const port = process.env.PORT || 3600;
-const isProduction = process.env.NODE_ENV === 'production';
 
 app.use('/assets', express.static('assets'));
 
 app.use((req, res) => {
-  const normalizeLink = isProduction
-    ? 'https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'
-    : 'https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css';
-
+  const normalizeLink = 'https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css';
   const css = new Set();
   const context = {
     // eslint-disable-next-line
@@ -42,4 +38,5 @@ app.use((req, res) => {
   `);
 });
 
+// eslint-disable-next-line
 app.listen(port, () => console.log(`Listening at port ${port}!`));
