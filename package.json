@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "npm run build && cd build && node server"
+    "start": "npm run build && node build/server"
   },
   "dependencies": {
     "express": "^4.14.0",
