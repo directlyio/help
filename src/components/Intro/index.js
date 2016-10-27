@@ -7,7 +7,7 @@ import styles from './styles.scss';
 const Intro = () => (
   <div className={styles.intro}>
     <Container>
-      <Heading id="intro-heading">Directly question center</Heading>
+      <Heading id="intro-heading">Have some questions?</Heading>
       <p>If you need further assistence, please <a href="mailto:hello@directly.io">email us</a>.</p>
     </Container>
   </div>
