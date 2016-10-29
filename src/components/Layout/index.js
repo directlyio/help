@@ -11,7 +11,16 @@ const Layout = () => (
     <Header />
     <Intro />
     <ConsumerQuestions />
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
     <ProviderQuestions />
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
   </div>
 );
 
