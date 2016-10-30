@@ -21,15 +21,27 @@ const ProviderQuestions = () => (
       <Heading id="why-sell-on-directly" size={3}>
         Why should I sell my services on Directly?
       </Heading>
-      <p>1. To regain your autonomy from powerful insurance companies and hospital
-      organizations.</p>
-      <p>2. You will make more money on each procedure you perform because administrative costs are
-      dramatically reduced and there are no billing costs.</p>
-      <p>3. There are no denials of payment or the need to collect money from patients since all
-      services are paid for up front.</p>
-      <p>4. You set your own prices; we never tell you what to charge.</p>
-      <p>5. All treatment decisions are between you and your patient; we never get involved in
-      clinical decision making.</p>
+      <ol>
+        <li>
+          To regain your autonomy from powerful insurance companies and hospital
+          organizations.
+        </li>
+        <li>
+          You will make more money on each procedure you perform because administrative costs are
+          dramatically reduced and there are no billing costs.
+        </li>
+        <li>
+          There are no denials of payment or the need to collect money from patients since all
+          services are paid for up front.
+        </li>
+        <li>
+          You set your own prices; we never tell you what to charge.
+        </li>
+        <li>
+          All treatment decisions are between you and your patient; we never get involved in
+          clinical decision making.
+        </li>
+      </ol>
       <Heading id="why-put-prices-online" size={3}>
         Why would I put my prices online?
       </Heading>
