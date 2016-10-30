@@ -8,7 +8,9 @@ const Intro = () => (
   <div className={styles.intro}>
     <Container>
       <Heading id="intro-heading">Have some questions?</Heading>
-      <p>If you need further assistence, please <a href="mailto:hello@directly.io">email us</a>.</p>
+      <p className={styles.introContact}>
+        If you need further assistence, please <a href="mailto:hello@directly.io">email us</a>.
+      </p>
     </Container>
   </div>
 );

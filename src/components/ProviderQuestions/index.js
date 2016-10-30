@@ -6,6 +6,7 @@ const ProviderQuestions = () => (
   <div>
     <Container>
       <Heading id="consumer-questions" size={2}>Commonly asked provider questions</Heading>
+      <hr />
       <Heading id="what-is-directly" size={3}>
         What is Directly?
       </Heading>
@@ -70,17 +71,29 @@ const ProviderQuestions = () => (
         Why would a patient use Directly?
       </Heading>
       <p>Typical patient use cases for Directly are when:</p>
-      <p>1. They do not have insurance.</p>
-      <p>2. The procedure they require is not covered under their particular insurance policy (they
-      can submit an out-of-network claim, as necessary).</p>
-      <p>3. They have not met their deductible, and the price they see on Directly is less than
-      paying the rest of their deductible out-of-pocket.</p>
-      <p>4. The procedure on Directly is cheaper than using their insurance (i.e. they have a
-      bare-bones policy, they’ve gotten a similar procedure in the past which was more costly than
-      the price they see on Directly, etc.).</p>
-      <p>5. Their employer is self-insured. This means Directly can provide the patient and employer
-      with known costs, especially if the provider is out-of-network. This simultaneously saves the
-      employer a significant amount of money and improves employee benefit options.</p>
+      <ol>
+        <li>
+          They do not have insurance.
+        </li>
+        <li>
+          The procedure they require is not covered under their particular insurance policy (they
+          can submit an out-of-network claim, as necessary).
+        </li>
+        <li>
+          They have not met their deductible, and the price they see on Directly is less than
+          paying the rest of their deductible out-of-pocket.
+        </li>
+        <li>
+          The procedure on Directly is cheaper than using their insurance (i.e. they have a
+          bare-bones policy, they’ve gotten a similar procedure in the past which was more costly
+          than the price they see on Directly, etc.).
+        </li>
+        <li>
+          Their employer is self-insured. This means Directly can provide the patient and employer
+          with known costs, especially if the provider is out-of-network. This simultaneously
+          saves the employer a significant amount of money and improves employee benefit options.
+        </li>
+      </ol>
       <p>Elaborating on the last patient use case: Directly can currently be used as an
       out-of-network benefit option for self-insured companies. If an employee needs a procedure
       that is not covered under the contracted TPA network provided by a health insurance company,

@@ -6,6 +6,7 @@ const ConsumerQuestions = () => (
   <div>
     <Container>
       <Heading id="consumer-questions" size={2}>Commonly asked patient questions</Heading>
+      <hr />
       <Heading id="different-than-insurance" size={3}>
         Is this different than health insurance?
       </Heading>

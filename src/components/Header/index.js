@@ -28,17 +28,6 @@ const Header = () => (
       >
         Directly
       </div>
-      <input
-        type="text"
-        placeholder="Search for a knee surgery"
-        className={styles.search}
-        onKeyUp={(e) => {
-          if (e.keyCode !== 13) return;
-
-          const encodedSearchTerm = encodeURIComponent(e.target.value);
-          window.location = `${getBaseSitePath()}/search?q=${encodedSearchTerm}`;
-        }}
-      />
     </div>
   </header>
 );
