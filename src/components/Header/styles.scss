@@ -23,3 +23,37 @@
   color: transparentize(white, 0.2);
   margin-left: 1rem;
 }
+
+.search {
+  margin-left: 2rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid transparentize($dark, 0.65);
+  background: transparent;
+  border-radius: 0.25rem;
+  outline: 0;
+  transition: 0.2s ease-in-out;
+  width: 360px;
+  color: $dark;
+  box-shadow: 0 0 2rem 0 transparentize(black, 0.95);
+  font-size: 14px;
+
+  &:focus {
+    border: 1px solid transparentize($dark, 0.45);
+  }
+
+  &::-webkit-input-placeholder {
+    color: transparentize($dark, 0.3);
+  }
+
+  &:-moz-placeholder {
+    color: transparentize($dark, 0.3);
+  }
+
+  &::-moz-placeholder {
+    color: transparentize($dark, 0.3);
+  }
+
+  &:-ms-input-placeholder {
+    color: transparentize($dark, 0.3);
+  }
+}
