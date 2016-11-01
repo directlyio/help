@@ -8,15 +8,15 @@ const app = express();
 const port = process.env.PORT || 3600;
 const env = process.env.NODE_ENV;
 
-app.use('/assets', express.static('assets'));
-app.use(favicon(`${__dirname}/assets/iconsfavicon.ico`));
-
 if (env === 'production') {
   app.all('*', (req, res, next) => {
     if (req.secure) return next();
     return res.redirect(`https://${req.hostname}${req.url}`);
   });
 }
+
+app.use('/assets', express.static('assets'));
+app.use(favicon(`${__dirname}/assets/iconsfavicon.ico`));
 
 app.use((req, res) => {
   const normalizeLink = 'https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css';
