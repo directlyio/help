@@ -1,4 +1,5 @@
 const nodeExternals = require('webpack-node-externals');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const path = require('path');
 
 module.exports = [
@@ -66,6 +67,12 @@ module.exports = [
         },
       ],
     },
+    plugins: [
+      new FaviconsWebpackPlugin({
+        logo: path.resolve(__dirname, './favicon.png'),
+        prefix: '/icons',
+      }),
+    ],
     sassLoader: {
       includePaths: [path.resolve(__dirname, './src')],
     },

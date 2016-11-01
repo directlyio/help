@@ -1,12 +1,21 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import express from 'express';
+import favicon from 'serve-favicon';
 import { App, Layout } from './components';
 
 const app = express();
 const port = process.env.PORT || 3600;
+const env = process.env.NODE_ENV;
+
+if (env === 'production') {
+  app.get('*', (req, res) => {
+    res.redirect(`https://help.directly.io${req.url}`);
+  });
+}
 
 app.use('/assets', express.static('assets'));
+app.use(favicon(`${__dirname}/assets/iconsfavicon.ico`));
 
 app.use((req, res) => {
   const normalizeLink = 'https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css';
@@ -26,6 +35,9 @@ app.use((req, res) => {
     <!doctype html>
     <html>
       <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
         <title>Directly FAQ</title>
         <script async src="/assets/bundle.js"></script>
         <link href="${normalizeLink}" rel="stylesheet">
