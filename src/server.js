@@ -8,14 +8,14 @@ const app = express();
 const port = process.env.PORT || 3600;
 const env = process.env.NODE_ENV;
 
-if (env === 'production') {
-  app.get('*', (req, res) => {
-    res.redirect(`https://help.directly.io${req.url}`);
-  });
-}
-
 app.use('/assets', express.static('assets'));
 app.use(favicon(`${__dirname}/assets/iconsfavicon.ico`));
+
+if (env === 'production') {
+  app.get('*', (req, res) => {
+    if (req.protocol === 'http') res.redirect('https://help.directly.io');
+  });
+}
 
 app.use((req, res) => {
   const normalizeLink = 'https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css';
