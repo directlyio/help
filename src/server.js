@@ -12,8 +12,9 @@ app.use('/assets', express.static('assets'));
 app.use(favicon(`${__dirname}/assets/iconsfavicon.ico`));
 
 if (env === 'production') {
-  app.get('*', (req, res) => {
-    if (req.protocol === 'http') res.redirect('https://help.directly.io');
+  app.all('*', (req, res, next) => {
+    if (req.secure) return next();
+    return res.redirect(`https://${req.hostname}${req.url}`);
   });
 }
 
