@@ -10,9 +10,7 @@ const env = process.env.NODE_ENV;
 
 if (env === 'production') {
   app.all('*', (req, res, next) => {
-    console.log('Am I secure?', req.secure);
-    if (req.secure) return next();
-    console.log('Should not get here...redirecting');
+    if (req.headers['x-forwarded-proto'] === 'https') return next();
     return res.redirect(`https://${req.hostname}${req.url}`);
   });
 }
