@@ -71,6 +71,18 @@ module.exports = [
       new FaviconsWebpackPlugin({
         logo: path.resolve(__dirname, './favicon.png'),
         prefix: '/icons',
+        icons: {
+          android: false,
+          appleIcon: false,
+          appleStartup: false,
+          coast: false,
+          favicons: true,
+          firefox: false,
+          opengraph: false,
+          twitter: false,
+          yandex: false,
+          windows: false,
+        },
       }),
     ],
     sassLoader: {
